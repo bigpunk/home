@@ -1,0 +1,57 @@
+# Ignore everything by default...
+/*
+# ...then whitelist anything that we want to track. Starting of course with
+# this file and other git meta data (e.g. for git-submodule):
+!.gitignore
+!.gitmodules
+
+# XDG home, allow further whitelisting
+!/.config
+/.config/*
+
+# File types that need to be ignored anywhere:
+.DS_Store
+.*.sw?
+# TODO: incomplete, needs more?
+
+# ~/bins is a good place for random utility scripts; see bin/.gitignore.
+!bin/
+
+# Common shell environment and configuration
+!.profile
+!.profile.d/
+!.aliases
+!.dircolors/
+!.inputrc
+
+# Bash configuration
+!.bash_profile
+!.bashrc
+
+# Zsh configuration
+!.zsh/
+!.zshenv
+!.zprofile
+!.zshrc
+!.zlogin
+!.zlogout
+
+# Git user config
+!.gitconfig
+
+# SSH Config
+!.ssh/config
+
+# TMux config
+!.tmux*.conf
+
+# (Neo)Vim Config
+!.vimrc
+!/.config/nvim
+.config/nvim/*
+!/.config/nvim/init.vim
+
+# For starter_home itself, you'll probably want to drop these
+!README.md
+!TODO.md
+!MOVING.md

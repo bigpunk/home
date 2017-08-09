@@ -1,0 +1,5 @@
+[user]
+	name = Rob Punkunus
+	email = github@punkunus.com
+[credential]
+	helper = osxkeychain
