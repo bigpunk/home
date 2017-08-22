@@ -1,0 +1,8 @@
+# Follow the same pattern as the toplevel ignore: whitelist
+*
+!.gitignore
+
+# git-setup-worktree-push and ancillary
+!git-setup-worktree-push
+!githook-update-worktree-post-receive
+!githook-update-worktree-update

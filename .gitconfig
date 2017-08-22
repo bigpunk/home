@@ -1,5 +1,79 @@
-[user]
-	name = Rob Punkunus
-	email = github@punkunus.com
-[credential]
-	helper = osxkeychain
+[branch]
+    autosetupmerge = always # setup branch tracking
+    autosetuprebase = always # default to rebasing rather than merge
+
+[color]
+    # turn on coloring in terminals
+    ui = auto
+
+[column]
+    # format lists, e.g. from git-branch, wide like `ls`'s output
+    ui = auto
+
+[diff]
+    renames = copies # more aggresisve rename detection
+
+[core]
+    # Use less as our pager, turn off the -c option if it was specified in $LESS,
+    # also don't use -S as per git default
+    pager = "less -+c -FRX"
+
+[grep]
+    patternType = perl # use modern regexp dialect by default
+
+[log]
+    # change default passed to git-log, so that we now get by default:
+    #     git log --abbrev-commit --date=relative --decorate ...
+    abbrevCommit = true
+    date = relative
+    decorate = true
+
+[rebase]
+    stat = true # show a summary by default
+    autosquash = true # honor commit markers like `fixup!`
+
+[rerere]
+    # remember and re-use merge conflict resolutions
+    autoupdate = true
+    enabled = true
+
+# log formats
+[pretty]
+    brief = %C(red)%h%Creset %C(green)%cd %Creset-%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset
+    briefreflog = %C(green)%gd %C(red)%h%Creset %Creset- %gs %C(bold blue)<%gn>%Creset
+
+# Command aliases
+[alias]
+    au = add --update
+    br = branch
+    brav = branch -av
+    brv = branch -v
+    ci = commit
+    cia = commit -a
+    ciam = commit -a -m
+    cic = commit -c
+    cim = commit -m
+    co = checkout
+    coB = checkout --no-track -B
+    cob = checkout -b
+    cod = checkout --detach
+    cp = cherry-pick
+    dc = diff --cached
+    doh = commit --amend --no-edit
+    dohe = commit --amend --edit
+    lb = log --pretty=brief
+    lbf = log --first-parent --pretty=brief
+    lg = log --graph --pretty=brief
+    lga = log --first-parent --graph --pretty=brief --all
+    lgb = log --first-parent --graph --pretty=brief --branches
+    lgf = log --first-parent --graph --pretty=brief
+    phub = !git push -u origin $(basename $(git symbolic-ref HEAD)) && hub pull-request create
+    pub = !git push -u origin $(basename $(git symbolic-ref HEAD))
+    ra = rebase --abort
+    rb = rebase
+    rc = rebase --continue
+    redo = reset HEAD^ --mixed
+    rlg = reflog --pretty=briefreflog
+    rs = rebase --skip
+    st = status --short --branch
+    suri = submodule update --recursive --init
