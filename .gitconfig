@@ -77,3 +77,8 @@
     rs = rebase --skip
     st = status --short --branch
     suri = submodule update --recursive --init
+
+# This is Git's per-user configuration file.
+[user]
+	name = Rob Punkunus
+	email = github@punkunus.com
