@@ -2,6 +2,7 @@
 
 # Make sure that .profile has been loaded, even if
 # there was no "login shell" in our lineage.
+# See .profile for information on shell startup.
 if [ -z "$_PROFILE_LOADED" ]; then
     source ~/.profile
 else

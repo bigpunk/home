@@ -16,6 +16,11 @@ source ~/.profile.d/dircolors
 
 # TODO: use github.com/jcorbin/deporder once it's ready
 
+# On most systems .bash_profile is only used for login shells where you
+# enter your user name/password.  .bashrc is used for non-login shells.
+# In theory this lets you display different information when you
+# login to a machine.  On MacOS login shells are used everytime by default.
+
 # Given the complicated relationship between profile and shell rc,
 # and given the assumption "you never don't want your profile setup in an
 # interactive shell":
