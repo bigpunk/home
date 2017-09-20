@@ -7,3 +7,16 @@ set visible-stats On
 
 # vi-style keybinds
 set editing-mode vi
+
+# NOTE trigger a reread of .inputrc: with C-x C-r
+
+# map entering insertion and movement modes to something other
+# than esc so modes can be changed without fingers leaving home row.
+# nb: in this mode to print a j to appear you need to type the next character.
+$if mode=vi
+    set keymap vi-command
+    "jj": vi-insertion-mode
+
+    set keymap vi-insert
+    "jj": vi-movement-mode
+$endif
