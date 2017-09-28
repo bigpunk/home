@@ -108,4 +108,7 @@ let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
 
+" add green line numbers along the side of the editor window.
+set number
+:highlight LineNr ctermfg=green
 
