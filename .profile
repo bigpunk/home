@@ -14,6 +14,11 @@ source ~/.profile.d/editor
 source ~/.profile.d/term
 source ~/.profile.d/dircolors
 
+# Put Ruby Gems in homedir to avoid need for global sudo to install.
+# This was initially done for cocoapods suppport.
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # TODO: use github.com/jcorbin/deporder once it's ready
 
 # On most systems .bash_profile is only used for login shells where you
